@@ -18,6 +18,19 @@ namespace Map
             }
         }
 
+        private TileModel _tileModel;
+        public TileModel tileModel
+        {
+            get
+            {
+                if (!_tileModel)
+                {
+                    _tileModel = this.GetComponent<TileModel>();
+                }
+                return _tileModel;
+            }
+        }
+
         private SpriteRenderer _spriteRenderer;
         private SpriteRenderer spriteRenderer
         {
@@ -50,6 +63,7 @@ namespace Map
                 this.spriteRenderer.sortingOrder = value;
             }
         }
+
 
         private void Start()
         {
