@@ -6,7 +6,7 @@ namespace JingMai
 {
     public class PartOfBodyNodeController : MonoBehaviour
     {
-        public static float NodeSize = 1.2f;
+        public static float NodeSize = 1.1f;
 
         public PartOfBodyNodeModel model;
 

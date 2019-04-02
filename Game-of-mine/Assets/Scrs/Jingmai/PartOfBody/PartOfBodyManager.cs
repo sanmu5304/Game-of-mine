@@ -9,13 +9,14 @@ namespace JingMai
     {
         public GameObject PartOfBodyPrefab;
 
-        public GameObject JingMaiRoot;
+        public GameObject PartOfBodyRoot;
 
         public PartOfBodyGrade grade;
         public int level = 0;
 
         void Start()
         {
+            this.GenerateBodyPart();
 
         }
 
@@ -78,7 +79,7 @@ namespace JingMai
 
             bodyModel.InitPartOfBodyNodeModels();
 
-            PartOfBodyController bodyPartOfBodyController = Instantiate(this.PartOfBodyPrefab, this.JingMaiRoot.transform).GetComponent<PartOfBodyController>();
+            PartOfBodyController bodyPartOfBodyController = Instantiate(this.PartOfBodyPrefab, this.PartOfBodyRoot.transform).GetComponent<PartOfBodyController>();
 
             this.partOfBodyControllers.Add(bodyPartOfBodyController);
 
